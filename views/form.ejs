@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/basestyle.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="content-container">
+      <header>
+        <h1>Add a new post!</h1>
+        <p>This new post form is created on a separate page in order to practice using different routes.</p>
+      </header>
+      <form method="POST" action="/new" id="new-post-form">
+        <label for="user"> 
+          Username:<br />
+          <input type="text" name="user" id="user"/>
+        </label>
+        <label for="text">
+          Type your message:<br />
+          <textarea name="text" id="text"></textarea>
+        </label>
+        <div class="button-row">
+          <button type="submit">Submit post</button>
+          <button type="reset">Reset fields</button>
+        </div>
+      </form>
+
+    </div>
+  </body>
+</html>

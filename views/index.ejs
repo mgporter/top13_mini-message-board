@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/basestyle.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="content-container">
+      <header>
+        <h1>Welcome to the super-mini-message board!!</h1>
+        <p>This message board is built on a Node.js with the Express framework and EJS templating engine. It is connected to a MongoDB database. Let's try it out!</p>  
+      </header>
+      <div id="newpost-container">
+        <a href="./new" class="buttonlink">Create a new post</a>
+      </div>
+      <div id="posts-container">
+        <ul>
+          <% messages.forEach((message) => { %>
+            <li>
+              <h2>Post by user <%= message.user %></h2>
+              <h3>Posted on: <%= message.added %></h3>
+              <p><%= message.text %></p>
+            </li>
+          <% }); %>
+        </ul>
+        
+      </div>
+    </div>
+  </body>
+</html>
